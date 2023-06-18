@@ -6,7 +6,7 @@
 
 std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Windows::SysAdmin::MainWindow::show()
 {
-    std::cout << "1) Изменить сотрудника\n2) Изменить продукты\n3) Добавить продукт" << std::endl;
+    std::cout << "1) Изменить сотрудника\n2) Изменить продукт\n3) Добавить продукт\n4) Удалить продукт" << std::endl;
 
     std::cout << "Введите пункт: ";
 
