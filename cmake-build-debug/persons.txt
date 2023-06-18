@@ -1,0 +1,13 @@
+[
+    {
+        "personsNum": 1
+    },
+    {
+        "login": "ilya",
+        "name": "Ilya",
+        "password": "15130544172693429570",
+        "patronymic": "Uuuu",
+        "personType": 1,
+        "surname": "Stukalov"
+    }
+]
