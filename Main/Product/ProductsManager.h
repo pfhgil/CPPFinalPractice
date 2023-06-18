@@ -13,7 +13,7 @@ namespace FinalPractice::Main::Product
     class ProductsManager
     {
     private:
-        static std::list<std::shared_ptr<Product>> m_products;
+        static inline std::list<std::shared_ptr<Product>> m_products;
 
     public:
         static std::shared_ptr<Product> createProduct() noexcept;

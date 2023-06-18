@@ -6,10 +6,15 @@
 #define CHOOSE_AUTH_WND_NAME "ChooseAuthWindow"
 #define LOGIN_WND_NAME "LoginWindow"
 #define REGISTRATION_WND_NAME "RegistrationWindow"
+
 #define GUEST_MAIN_WND_NAME "Guest/MainWindow"
+
 #define SYS_ADMIN_MAIN_WND_NAME "SysAdmin/MainWindow"
 #define SYS_ADMIN_CHOOSE_PERSON_WND_NAME "SysAdmin/ChoosePersonWindow"
-#define SYS_EDIT_PERSON_WND_NAME "SysAdmin/EditPersonWindow"
+#define SYS_ADMIN_EDIT_PERSON_WND_NAME "SysAdmin/EditPersonWindow"
+
+#define SYS_ADMIN_CHOOSE_PRODUCT_WND_NAME "SysAdmin/ChooseProductWindow"
+#define SYS_ADMIN_EDIT_PRODUCT_WND_NAME "SysAdmin/EditProductWindow"
 
 #include <map>
 #include <string>

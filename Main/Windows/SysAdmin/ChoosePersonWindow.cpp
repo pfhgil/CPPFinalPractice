@@ -32,5 +32,5 @@ std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Wind
         num++;
     }
 
-    return WindowsManager::getWindow(SYS_EDIT_PERSON_WND_NAME);
+    return WindowsManager::getWindow(SYS_ADMIN_EDIT_PERSON_WND_NAME);
 }

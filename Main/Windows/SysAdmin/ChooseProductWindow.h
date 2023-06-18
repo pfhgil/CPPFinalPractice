@@ -5,7 +5,7 @@
 
 #include "Windows/IWindow.h"
 
-namespace FinalPractice::Main::SysAdmin
+namespace FinalPractice::Main::Windows::SysAdmin
 {
     class ChooseProductWindow : public Windows::IWindow
     {

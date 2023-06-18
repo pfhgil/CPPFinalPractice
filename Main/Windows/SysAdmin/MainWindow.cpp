@@ -16,8 +16,8 @@ std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Wind
     switch(point)
     {
         case 1: return WindowsManager::getWindow(SYS_ADMIN_CHOOSE_PERSON_WND_NAME);
-        case 2: break;
-        case 3: break;
+        case 2: return WindowsManager::getWindow(SYS_ADMIN_CHOOSE_PRODUCT_WND_NAME);
+        case 3: return WindowsManager::getWindow(SYS_ADMIN_EDIT_PRODUCT_WND_NAME);
     }
 
     return WindowsManager::getWindow(SYS_ADMIN_MAIN_WND_NAME);

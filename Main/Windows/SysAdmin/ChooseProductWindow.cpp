@@ -5,8 +5,10 @@
 #include "ChooseProductWindow.h"
 
 #include "Product/ProductsManager.h"
+#include "EditProductWindow.h"
+#include "Windows/WindowsManager.h"
 
-std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::SysAdmin::ChooseProductWindow::show()
+std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Windows::SysAdmin::ChooseProductWindow::show()
 {
     int productNum = 0;
     for(const auto& product : Product::ProductsManager::getProducts())
@@ -23,11 +25,11 @@ std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::SysA
     {
         if(productNum == chosenProduct)
         {
-            //return product;
+            EditProductWindow::m_currentEditablePerson = product;
             break;
         }
         productNum++;
     }
 
-    return std::shared_ptr<IWindow>();
+    return WindowsManager::getWindow(SYS_ADMIN_EDIT_PRODUCT_WND_NAME);
 }
