@@ -4,6 +4,7 @@
 
 #include "Windows/IWindow.h"
 #include "Persons/PersonsManager.h"
+#include "Product/ProductsManager.h"
 
 int main()
 {
@@ -12,6 +13,8 @@ int main()
 
     FinalPractice::Main::Windows::WindowsManager::init();
     FinalPractice::Main::Persons::PersonsManager::load("persons.txt");
+
+    FinalPractice::Main::Product::ProductsManager::load("products.txt");
 
     std::shared_ptr<FinalPractice::Main::Windows::IWindow> currentWindow = FinalPractice::Main::Windows::WindowsManager::getWindow(CHOOSE_AUTH_WND_NAME);
 

@@ -13,7 +13,10 @@ std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Wind
     int productNum = 0;
     for(const auto& product : Product::ProductsManager::getProducts())
     {
-        std::cout << std::to_string(productNum) << ") ID: " << product->m_id << ", Имя: " << product->m_name << std::endl;
+        std::cout << std::to_string(productNum) << ") ID: " << product->m_id <<
+        ", Имя: " << product->m_name << ", цена: " << std::to_string(product->m_cost) << std::endl;
+
+        productNum++;
     }
 
     std::cout << "Выберите продукт: ";

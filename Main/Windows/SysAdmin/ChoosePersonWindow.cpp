@@ -16,7 +16,7 @@ std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Wind
         num++;
     }
 
-//
+
     int chosenPoint = getPoint(0, num);
 
     num = 0;
