@@ -1,13 +1,15 @@
 #include "IWindow.h"
 
-std::uint8_t FinalPractice::Main::Windows::IWindow::getPoint(const std::uint8_t& min, const std::uint8_t& max)
+#include "Utils.h"
+
+std::uint8_t FinalPractice::Main::Windows::IWindow::getPoint(const std::int8_t& min, const std::int8_t& max)
 {
     int num = 0;
     while(true)
     {
         try
         {
-            std::cin >> num;
+            num = Utils::getInputNum<std::uint8_t>("");
 
             if(!(num >= min && num <= max))
             {

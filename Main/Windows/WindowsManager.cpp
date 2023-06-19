@@ -13,6 +13,9 @@
 #include "SysAdmin/ChooseProductWindow.h"
 #include "SysAdmin/EditProductWindow.h"
 
+#include "SysAdmin/ChooseMenuWindow.h"
+#include "SysAdmin/EditMenuWindow.h"
+
 void FinalPractice::Main::Windows::WindowsManager::init() noexcept
 {
     m_windows.emplace(CHOOSE_AUTH_WND_NAME, std::make_shared<Windows::Auth::ChooseAuthWindow>());
@@ -30,6 +33,9 @@ void FinalPractice::Main::Windows::WindowsManager::init() noexcept
 
     m_windows.emplace(SYS_ADMIN_CHOOSE_PRODUCT_WND_NAME, std::make_shared<Windows::SysAdmin::ChooseProductWindow>());
     m_windows.emplace(SYS_ADMIN_EDIT_PRODUCT_WND_NAME, std::make_shared<Windows::SysAdmin::EditProductWindow>());
+
+    m_windows.emplace(SYS_ADMIN_CHOOSE_MENU_WND_NAME, std::make_shared<Windows::SysAdmin::ChooseMenuWindow>());
+    m_windows.emplace(SYS_ADMIN_EDIT_MENU_WND_NAME, std::make_shared<Windows::SysAdmin::EditMenuWindow>());
     // -----------------
 
     setCurrentWindow(getWindow(CHOOSE_AUTH_WND_NAME));

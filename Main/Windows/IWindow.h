@@ -20,7 +20,7 @@ namespace FinalPractice::Main::Windows
     public:
         virtual std::shared_ptr<IWindow> show() = 0;
 
-        virtual std::uint8_t getPoint(const std::uint8_t& min, const std::uint8_t& max);
+        virtual std::uint8_t getPoint(const std::int8_t& min, const std::int8_t& max);
     };
 }
 

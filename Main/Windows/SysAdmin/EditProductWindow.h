@@ -5,16 +5,10 @@
 
 #include "Windows/IWindow.h"
 #include "Product/Product.h"
+#include "Windows/EditMode.h"
 
 namespace FinalPractice::Main::Windows::SysAdmin
 {
-    enum EditMode
-    {
-        CREATE,
-        EDIT,
-        DELETE
-    };
-
     class EditProductWindow : public IWindow
     {
     public:

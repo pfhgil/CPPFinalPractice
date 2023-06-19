@@ -16,6 +16,9 @@
 #define SYS_ADMIN_CHOOSE_PRODUCT_WND_NAME "SysAdmin/ChooseProductWindow"
 #define SYS_ADMIN_EDIT_PRODUCT_WND_NAME "SysAdmin/EditProductWindow"
 
+#define SYS_ADMIN_CHOOSE_MENU_WND_NAME "SysAdmin/ChooseMenuWindow"
+#define SYS_ADMIN_EDIT_MENU_WND_NAME "SysAdmin/EditMenuWindow"
+
 #include <map>
 #include <string>
 
