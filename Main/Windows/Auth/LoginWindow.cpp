@@ -34,13 +34,13 @@ std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Wind
     {
         switch(foundPerson->m_personType)
         {
-            case Persons::PT_GUEST:break;
+            case Persons::PT_GUEST: return WindowsManager::getWindow(GUEST_MAIN_WND_NAME);
             case Persons::PT_SYS_ADMIN: return WindowsManager::getWindow(SYS_ADMIN_MAIN_WND_NAME);
-            case Persons::PT_WAREHOUSE:break;
-            case Persons::PT_PROVIDER:break;
-            case Persons::PT_ACCOUNTANT:break;
-            case Persons::PT_COOK:break;
-            case Persons::PT_WAITER:break;
+            case Persons::PT_WAREHOUSE: return WindowsManager::getWindow(WAREHOUSE_MAIN_WND_NAME);
+            case Persons::PT_PROVIDER: return WindowsManager::getWindow(PROVIDER_MAIN_WND_NAME);
+            case Persons::PT_ACCOUNTANT: return WindowsManager::getWindow(ACCOUNTANT_MAIN_WND_NAME);
+            case Persons::PT_COOK: return WindowsManager::getWindow(COOK_MAIN_WND_NAME);
+            case Persons::PT_WAITER: return WindowsManager::getWindow(WAITER_MAIN_WND_NAME);
         }
     }
     //return std::shared_ptr<IWindow>();

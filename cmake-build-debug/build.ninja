@@ -49,6 +49,27 @@ cmake_ninja_workdir = D$:/tehnikum/C++/final_practice/CPPFinalPractice/cmake-bui
 
 build cmake_object_order_depends_target_final_practice: phony || CMakeFiles/final_practice.dir
 
+build CMakeFiles/final_practice.dir/Main/Accountant/AccountantLog.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Accountant/AccountantLog.cpp || cmake_object_order_depends_target_final_practice
+  DEP_FILE = CMakeFiles\final_practice.dir\Main\Accountant\AccountantLog.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  INCLUDES = -ID:/tehnikum/C++/final_practice/CPPFinalPractice/Main
+  OBJECT_DIR = CMakeFiles\final_practice.dir
+  OBJECT_FILE_DIR = CMakeFiles\final_practice.dir\Main\Accountant
+
+build CMakeFiles/final_practice.dir/Main/Cart/Cart.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Cart/Cart.cpp || cmake_object_order_depends_target_final_practice
+  DEP_FILE = CMakeFiles\final_practice.dir\Main\Cart\Cart.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  INCLUDES = -ID:/tehnikum/C++/final_practice/CPPFinalPractice/Main
+  OBJECT_DIR = CMakeFiles\final_practice.dir
+  OBJECT_FILE_DIR = CMakeFiles\final_practice.dir\Main\Cart
+
+build CMakeFiles/final_practice.dir/Main/Cart/Guest.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Cart/Guest.cpp || cmake_object_order_depends_target_final_practice
+  DEP_FILE = CMakeFiles\final_practice.dir\Main\Cart\Guest.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  INCLUDES = -ID:/tehnikum/C++/final_practice/CPPFinalPractice/Main
+  OBJECT_DIR = CMakeFiles\final_practice.dir
+  OBJECT_FILE_DIR = CMakeFiles\final_practice.dir\Main\Cart
+
 build CMakeFiles/final_practice.dir/Main/Menu/Menu.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Menu/Menu.cpp || cmake_object_order_depends_target_final_practice
   DEP_FILE = CMakeFiles\final_practice.dir\Main\Menu\Menu.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++23
@@ -98,6 +119,34 @@ build CMakeFiles/final_practice.dir/Main/Product/ProductsManager.cpp.obj: CXX_CO
   OBJECT_DIR = CMakeFiles\final_practice.dir
   OBJECT_FILE_DIR = CMakeFiles\final_practice.dir\Main\Product
 
+build CMakeFiles/final_practice.dir/Main/Restaurant.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Restaurant.cpp || cmake_object_order_depends_target_final_practice
+  DEP_FILE = CMakeFiles\final_practice.dir\Main\Restaurant.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  INCLUDES = -ID:/tehnikum/C++/final_practice/CPPFinalPractice/Main
+  OBJECT_DIR = CMakeFiles\final_practice.dir
+  OBJECT_FILE_DIR = CMakeFiles\final_practice.dir\Main
+
+build CMakeFiles/final_practice.dir/Main/Warehouse/ProductsSet.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Warehouse/ProductsSet.cpp || cmake_object_order_depends_target_final_practice
+  DEP_FILE = CMakeFiles\final_practice.dir\Main\Warehouse\ProductsSet.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  INCLUDES = -ID:/tehnikum/C++/final_practice/CPPFinalPractice/Main
+  OBJECT_DIR = CMakeFiles\final_practice.dir
+  OBJECT_FILE_DIR = CMakeFiles\final_practice.dir\Main\Warehouse
+
+build CMakeFiles/final_practice.dir/Main/Warehouse/WarehouseManager.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Warehouse/WarehouseManager.cpp || cmake_object_order_depends_target_final_practice
+  DEP_FILE = CMakeFiles\final_practice.dir\Main\Warehouse\WarehouseManager.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  INCLUDES = -ID:/tehnikum/C++/final_practice/CPPFinalPractice/Main
+  OBJECT_DIR = CMakeFiles\final_practice.dir
+  OBJECT_FILE_DIR = CMakeFiles\final_practice.dir\Main\Warehouse
+
+build CMakeFiles/final_practice.dir/Main/Windows/Accountant/MainWindow.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Windows/Accountant/MainWindow.cpp || cmake_object_order_depends_target_final_practice
+  DEP_FILE = CMakeFiles\final_practice.dir\Main\Windows\Accountant\MainWindow.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  INCLUDES = -ID:/tehnikum/C++/final_practice/CPPFinalPractice/Main
+  OBJECT_DIR = CMakeFiles\final_practice.dir
+  OBJECT_FILE_DIR = CMakeFiles\final_practice.dir\Main\Windows\Accountant
+
 build CMakeFiles/final_practice.dir/Main/Windows/Auth/ChooseAuthWindow.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Windows/Auth/ChooseAuthWindow.cpp || cmake_object_order_depends_target_final_practice
   DEP_FILE = CMakeFiles\final_practice.dir\Main\Windows\Auth\ChooseAuthWindow.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++23
@@ -119,6 +168,13 @@ build CMakeFiles/final_practice.dir/Main/Windows/Auth/RegistrationWindow.cpp.obj
   OBJECT_DIR = CMakeFiles\final_practice.dir
   OBJECT_FILE_DIR = CMakeFiles\final_practice.dir\Main\Windows\Auth
 
+build CMakeFiles/final_practice.dir/Main/Windows/Cook/MainWindow.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Windows/Cook/MainWindow.cpp || cmake_object_order_depends_target_final_practice
+  DEP_FILE = CMakeFiles\final_practice.dir\Main\Windows\Cook\MainWindow.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  INCLUDES = -ID:/tehnikum/C++/final_practice/CPPFinalPractice/Main
+  OBJECT_DIR = CMakeFiles\final_practice.dir
+  OBJECT_FILE_DIR = CMakeFiles\final_practice.dir\Main\Windows\Cook
+
 build CMakeFiles/final_practice.dir/Main/Windows/Guest/MainWindow.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Windows/Guest/MainWindow.cpp || cmake_object_order_depends_target_final_practice
   DEP_FILE = CMakeFiles\final_practice.dir\Main\Windows\Guest\MainWindow.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++23
@@ -132,6 +188,13 @@ build CMakeFiles/final_practice.dir/Main/Windows/IWindow.cpp.obj: CXX_COMPILER__
   INCLUDES = -ID:/tehnikum/C++/final_practice/CPPFinalPractice/Main
   OBJECT_DIR = CMakeFiles\final_practice.dir
   OBJECT_FILE_DIR = CMakeFiles\final_practice.dir\Main\Windows
+
+build CMakeFiles/final_practice.dir/Main/Windows/Provider/MainWindow.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Windows/Provider/MainWindow.cpp || cmake_object_order_depends_target_final_practice
+  DEP_FILE = CMakeFiles\final_practice.dir\Main\Windows\Provider\MainWindow.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  INCLUDES = -ID:/tehnikum/C++/final_practice/CPPFinalPractice/Main
+  OBJECT_DIR = CMakeFiles\final_practice.dir
+  OBJECT_FILE_DIR = CMakeFiles\final_practice.dir\Main\Windows\Provider
 
 build CMakeFiles/final_practice.dir/Main/Windows/SysAdmin/ChooseMenuWindow.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Windows/SysAdmin/ChooseMenuWindow.cpp || cmake_object_order_depends_target_final_practice
   DEP_FILE = CMakeFiles\final_practice.dir\Main\Windows\SysAdmin\ChooseMenuWindow.cpp.obj.d
@@ -182,6 +245,34 @@ build CMakeFiles/final_practice.dir/Main/Windows/SysAdmin/MainWindow.cpp.obj: CX
   OBJECT_DIR = CMakeFiles\final_practice.dir
   OBJECT_FILE_DIR = CMakeFiles\final_practice.dir\Main\Windows\SysAdmin
 
+build CMakeFiles/final_practice.dir/Main/Windows/Waiter/MainWindow.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Windows/Waiter/MainWindow.cpp || cmake_object_order_depends_target_final_practice
+  DEP_FILE = CMakeFiles\final_practice.dir\Main\Windows\Waiter\MainWindow.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  INCLUDES = -ID:/tehnikum/C++/final_practice/CPPFinalPractice/Main
+  OBJECT_DIR = CMakeFiles\final_practice.dir
+  OBJECT_FILE_DIR = CMakeFiles\final_practice.dir\Main\Windows\Waiter
+
+build CMakeFiles/final_practice.dir/Main/Windows/Warehouse/MainWindow.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Windows/Warehouse/MainWindow.cpp || cmake_object_order_depends_target_final_practice
+  DEP_FILE = CMakeFiles\final_practice.dir\Main\Windows\Warehouse\MainWindow.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  INCLUDES = -ID:/tehnikum/C++/final_practice/CPPFinalPractice/Main
+  OBJECT_DIR = CMakeFiles\final_practice.dir
+  OBJECT_FILE_DIR = CMakeFiles\final_practice.dir\Main\Windows\Warehouse
+
+build CMakeFiles/final_practice.dir/Main/Windows/Warehouse/ProductsOrderWindow.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Windows/Warehouse/ProductsOrderWindow.cpp || cmake_object_order_depends_target_final_practice
+  DEP_FILE = CMakeFiles\final_practice.dir\Main\Windows\Warehouse\ProductsOrderWindow.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  INCLUDES = -ID:/tehnikum/C++/final_practice/CPPFinalPractice/Main
+  OBJECT_DIR = CMakeFiles\final_practice.dir
+  OBJECT_FILE_DIR = CMakeFiles\final_practice.dir\Main\Windows\Warehouse
+
+build CMakeFiles/final_practice.dir/Main/Windows/Warehouse/ProductsViewWindow.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Windows/Warehouse/ProductsViewWindow.cpp || cmake_object_order_depends_target_final_practice
+  DEP_FILE = CMakeFiles\final_practice.dir\Main\Windows\Warehouse\ProductsViewWindow.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  INCLUDES = -ID:/tehnikum/C++/final_practice/CPPFinalPractice/Main
+  OBJECT_DIR = CMakeFiles\final_practice.dir
+  OBJECT_FILE_DIR = CMakeFiles\final_practice.dir\Main\Windows\Warehouse
+
 build CMakeFiles/final_practice.dir/Main/Windows/WindowsManager.cpp.obj: CXX_COMPILER__final_practice_Debug D$:/tehnikum/C++/final_practice/CPPFinalPractice/Main/Windows/WindowsManager.cpp || cmake_object_order_depends_target_final_practice
   DEP_FILE = CMakeFiles\final_practice.dir\Main\Windows\WindowsManager.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++23
@@ -204,7 +295,7 @@ build CMakeFiles/final_practice.dir/Main/main.cpp.obj: CXX_COMPILER__final_pract
 #############################################
 # Link the executable final_practice.exe
 
-build final_practice.exe: CXX_EXECUTABLE_LINKER__final_practice_Debug CMakeFiles/final_practice.dir/Main/Menu/Menu.cpp.obj CMakeFiles/final_practice.dir/Main/Menu/MenuManager.cpp.obj CMakeFiles/final_practice.dir/Main/Persons/Person.cpp.obj CMakeFiles/final_practice.dir/Main/Persons/PersonsManager.cpp.obj CMakeFiles/final_practice.dir/Main/Persons/SysAdmin.cpp.obj CMakeFiles/final_practice.dir/Main/Product/Product.cpp.obj CMakeFiles/final_practice.dir/Main/Product/ProductsManager.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/Auth/ChooseAuthWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/Auth/LoginWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/Auth/RegistrationWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/Guest/MainWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/IWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/SysAdmin/ChooseMenuWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/SysAdmin/ChoosePersonWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/SysAdmin/ChooseProductWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/SysAdmin/EditMenuWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/SysAdmin/EditPersonWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/SysAdmin/EditProductWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/SysAdmin/MainWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/WindowsManager.cpp.obj CMakeFiles/final_practice.dir/Main/main.cpp.obj
+build final_practice.exe: CXX_EXECUTABLE_LINKER__final_practice_Debug CMakeFiles/final_practice.dir/Main/Accountant/AccountantLog.cpp.obj CMakeFiles/final_practice.dir/Main/Cart/Cart.cpp.obj CMakeFiles/final_practice.dir/Main/Cart/Guest.cpp.obj CMakeFiles/final_practice.dir/Main/Menu/Menu.cpp.obj CMakeFiles/final_practice.dir/Main/Menu/MenuManager.cpp.obj CMakeFiles/final_practice.dir/Main/Persons/Person.cpp.obj CMakeFiles/final_practice.dir/Main/Persons/PersonsManager.cpp.obj CMakeFiles/final_practice.dir/Main/Persons/SysAdmin.cpp.obj CMakeFiles/final_practice.dir/Main/Product/Product.cpp.obj CMakeFiles/final_practice.dir/Main/Product/ProductsManager.cpp.obj CMakeFiles/final_practice.dir/Main/Restaurant.cpp.obj CMakeFiles/final_practice.dir/Main/Warehouse/ProductsSet.cpp.obj CMakeFiles/final_practice.dir/Main/Warehouse/WarehouseManager.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/Accountant/MainWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/Auth/ChooseAuthWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/Auth/LoginWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/Auth/RegistrationWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/Cook/MainWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/Guest/MainWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/IWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/Provider/MainWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/SysAdmin/ChooseMenuWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/SysAdmin/ChoosePersonWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/SysAdmin/ChooseProductWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/SysAdmin/EditMenuWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/SysAdmin/EditPersonWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/SysAdmin/EditProductWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/SysAdmin/MainWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/Waiter/MainWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/Warehouse/MainWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/Warehouse/ProductsOrderWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/Warehouse/ProductsViewWindow.cpp.obj CMakeFiles/final_practice.dir/Main/Windows/WindowsManager.cpp.obj CMakeFiles/final_practice.dir/Main/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\final_practice.dir

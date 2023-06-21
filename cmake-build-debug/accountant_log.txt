@@ -1,0 +1,14 @@
+{
+    "acceptedProductDeliveriesLog": [
+        "ID: 0, название: the best product, стоимость (шт.): 10.000000, кол-во: 100"
+    ],
+    "acceptedProductDeliveriesLogSize": 1,
+    "dishesSold": 0,
+    "dishesSoldSum": 0.0,
+    "moneySpentOnProducts": 10.0,
+    "orderedProductsLog": [
+        "ID: 0, название: the best product, стоимость (шт.): 10.000000, кол-во: 1"
+    ],
+    "orderedProductsLogSize": 1,
+    "soldDishesLogSize": 0
+}

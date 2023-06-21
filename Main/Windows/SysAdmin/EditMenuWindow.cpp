@@ -6,6 +6,7 @@
 #include "Menu/MenuManager.h"
 #include "Product/ProductsManager.h"
 #include "Utils.h"
+#include "Warehouse/WarehouseManager.h"
 
 std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Windows::SysAdmin::EditMenuWindow::show()
 {
@@ -37,13 +38,19 @@ std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Wind
                 }
 
                 productsNum = 1;
-                for(auto const& product : Product::ProductsManager::getProducts())
+                for(auto const& product :Warehouse::WarehouseManager::m_productsInWarehouse)
                 {
                     if(chosenProduct == productsNum)
                     {
-                        newMenu->getProducts().push_back(product);
+                        // забираем продукт
+                        auto takenProduct = Warehouse::WarehouseManager::takeProduct(product->m_product->m_id);
 
-                        std::cout << "Продукт '" << product->m_name << "' (ID: " << std::to_string(product->m_id) << ") был добавлен в блюдо!" << std::endl;
+                        if(!takenProduct)
+                        {
+                            break;
+                        }
+
+                        std::cout << "Продукт '" << takenProduct->m_product->m_name << "' (ID: " << std::to_string(takenProduct->m_product->m_id) << ") был добавлен в блюдо!" << std::endl;
                         break;
                     }
 

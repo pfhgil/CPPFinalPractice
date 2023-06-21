@@ -1,0 +1,24 @@
+{
+    "menus": [
+        {
+            "cookingTimeSeconds": 120,
+            "cost": 200.0,
+            "description": "the best dish in da world",
+            "gram": 150,
+            "name": "the best dish",
+            "products": [
+                {
+                    "id": 0
+                },
+                {
+                    "id": 0
+                },
+                {
+                    "id": 0
+                }
+            ],
+            "productsNum": 3
+        }
+    ],
+    "menusNum": 1
+}

@@ -12,7 +12,7 @@ namespace FinalPractice::Main::Windows::SysAdmin
     class EditProductWindow : public IWindow
     {
     public:
-        static inline std::shared_ptr<Product::Product> m_currentEditablePerson;
+        static inline std::shared_ptr<Product::Product> m_currentEditableProduct;
 
         static inline EditMode m_editMode = EditMode::CREATE;
 

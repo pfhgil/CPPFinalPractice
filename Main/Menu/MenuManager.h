@@ -22,7 +22,7 @@ namespace FinalPractice::Main::Menu
         static void removeMenu(const std::string& name) noexcept;
         static bool isMenuExists(const std::string& name) noexcept;
 
-        static std::list<std::shared_ptr<Menu>> getMenus() noexcept;
+        static std::list<std::shared_ptr<Menu>>& getMenus() noexcept;
     };
 }
 

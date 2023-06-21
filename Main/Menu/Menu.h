@@ -26,7 +26,7 @@ namespace FinalPractice::Main::Menu
         std::uint16_t m_cookingTimeSeconds = 0;
         float m_cost = 0;
 
-        std::list<std::shared_ptr<Product::Product>> getProducts() noexcept;
+        std::list<std::shared_ptr<Product::Product>>& getProducts() noexcept;
     };
 }
 

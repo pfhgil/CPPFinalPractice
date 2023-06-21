@@ -16,6 +16,18 @@
 #include "SysAdmin/ChooseMenuWindow.h"
 #include "SysAdmin/EditMenuWindow.h"
 
+#include "Warehouse/MainWindow.h"
+#include "Warehouse/ProductsOrderWindow.h"
+#include "Warehouse/ProductsViewWindow.h"
+
+#include "Provider/MainWindow.h"
+
+#include "Accountant/MainWindow.h"
+
+#include "Cook/MainWindow.h"
+
+#include "Waiter/MainWindow.h"
+
 void FinalPractice::Main::Windows::WindowsManager::init() noexcept
 {
     m_windows.emplace(CHOOSE_AUTH_WND_NAME, std::make_shared<Windows::Auth::ChooseAuthWindow>());
@@ -36,6 +48,28 @@ void FinalPractice::Main::Windows::WindowsManager::init() noexcept
 
     m_windows.emplace(SYS_ADMIN_CHOOSE_MENU_WND_NAME, std::make_shared<Windows::SysAdmin::ChooseMenuWindow>());
     m_windows.emplace(SYS_ADMIN_EDIT_MENU_WND_NAME, std::make_shared<Windows::SysAdmin::EditMenuWindow>());
+    // -----------------
+
+    // warehouse
+    m_windows.emplace(WAREHOUSE_MAIN_WND_NAME, std::make_shared<Windows::Warehouse::MainWindow>());
+    m_windows.emplace(WAREHOUSE_PRODUCTS_ORDER_WND_NAME, std::make_shared<Windows::Warehouse::ProductsOrderWindow>());
+    m_windows.emplace(WAREHOUSE_PRODUCTS_VIEW_WND_NAME, std::make_shared<Windows::Warehouse::ProductsViewWindow>());
+    // -----------------
+
+    // provider
+    m_windows.emplace(PROVIDER_MAIN_WND_NAME, std::make_shared<Windows::Provider::MainWindow>());
+    // -----------------
+
+    // accountant
+    m_windows.emplace(ACCOUNTANT_MAIN_WND_NAME, std::make_shared<Windows::Accountant::MainWindow>());
+    // -----------------
+
+    // cook
+    m_windows.emplace(COOK_MAIN_WND_NAME, std::make_shared<Windows::Cook::MainWindow>());
+    // -----------------
+
+    // waiter
+    m_windows.emplace(WAITER_MAIN_WND_NAME, std::make_shared<Windows::Waiter::MainWindow>());
     // -----------------
 
     setCurrentWindow(getWindow(CHOOSE_AUTH_WND_NAME));

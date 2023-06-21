@@ -1,0 +1,11 @@
+{
+    "cart": {
+        "dishes": [
+            {
+                "name": "the best dish",
+                "status": 4
+            }
+        ],
+        "dishesSize": 1
+    }
+}

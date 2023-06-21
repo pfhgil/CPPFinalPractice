@@ -12,23 +12,23 @@ void FinalPractice::Main::Persons::PersonsManager::save(const std::string_view& 
 {
     std::ofstream personsFStream(path.data());
 
-    auto persons = nlohmann::json::array();
+    auto persons = nlohmann::json();
 
-    persons[0]["personsNum"] = m_persons.size();
+    persons["personsNum"] = m_persons.size();
 
-    int cur = 1;
+    int curPerson = 0;
     for(auto& m_person : m_persons)
     {
-        persons[cur]["login"] = m_person->m_login;
-        persons[cur]["password"] = m_person->m_password;
+        persons["persons"][curPerson]["login"] = m_person->m_login;
+        persons["persons"][curPerson]["password"] = m_person->m_password;
 
-        persons[cur]["name"] = m_person->m_name;
-        persons[cur]["surname"] = m_person->m_surname;
-        persons[cur]["patronymic"] = m_person->m_patronymic;
+        persons["persons"][curPerson]["name"] = m_person->m_name;
+        persons["persons"][curPerson]["surname"] = m_person->m_surname;
+        persons["persons"][curPerson]["patronymic"] = m_person->m_patronymic;
 
-        persons[cur]["personType"] = m_person->m_personType;
+        persons["persons"][curPerson]["personType"] = m_person->m_personType;
 
-        cur++;
+        curPerson++;
     }
 
     personsFStream << persons.dump(4);
@@ -41,19 +41,19 @@ void FinalPractice::Main::Persons::PersonsManager::load(const std::string_view& 
     std::ifstream personsFStream(path.data());
     auto persons = nlohmann::json::parse(personsFStream);
 
-    int personsNum = persons[0]["personsNum"];
+    int personsNum = persons["personsNum"];
 
-    for(int i = 1; i < personsNum + 1; i++)
+    for(int i = 0; i < personsNum; i++)
     {
         std::shared_ptr<Person> newPerson = std::make_shared<Person>();
-        newPerson->m_login = persons[i]["login"];
-        newPerson->m_password = persons[i]["password"];
+        newPerson->m_login = persons["persons"][i]["login"];
+        newPerson->m_password = persons["persons"][i]["password"];
 
-        newPerson->m_name = persons[i]["name"];
-        newPerson->m_surname = persons[i]["surname"];
-        newPerson->m_patronymic = persons[i]["patronymic"];
+        newPerson->m_name = persons["persons"][i]["name"];
+        newPerson->m_surname = persons["persons"][i]["surname"];
+        newPerson->m_patronymic = persons["persons"][i]["patronymic"];
 
-        newPerson->m_personType = persons[i]["personType"];
+        newPerson->m_personType = persons["persons"][i]["personType"];
 
         m_persons.push_back(newPerson);
     }
@@ -72,7 +72,7 @@ std::shared_ptr<FinalPractice::Main::Persons::Person> FinalPractice::Main::Perso
     return nullptr;
 }
 
-std::list<std::shared_ptr<FinalPractice::Main::Persons::Person>> FinalPractice::Main::Persons::PersonsManager::getPersons() noexcept
+std::list<std::shared_ptr<FinalPractice::Main::Persons::Person>>& FinalPractice::Main::Persons::PersonsManager::getPersons() noexcept
 {
     return m_persons;
 }

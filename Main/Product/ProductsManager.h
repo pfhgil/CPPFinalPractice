@@ -23,7 +23,8 @@ namespace FinalPractice::Main::Product
 
         static bool isProductExists(const std::uint16_t& productID) noexcept;
 
-        static std::list<std::shared_ptr<Product>> getProducts() noexcept;
+        static std::list<std::shared_ptr<Product>>& getProducts() noexcept;
+        static std::shared_ptr<Product> getProduct(const std::uint16_t& ID) noexcept;
 
         static void removeProduct(const std::uint16_t& ID) noexcept;
     };

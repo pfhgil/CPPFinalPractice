@@ -35,7 +35,7 @@ namespace FinalPractice::Main::Persons
 
         static std::shared_ptr<Person> getPerson(const std::string&);
 
-        static std::list<std::shared_ptr<Person>> getPersons() noexcept;
+        static std::list<std::shared_ptr<Person>>& getPersons() noexcept;
     };
 }
 

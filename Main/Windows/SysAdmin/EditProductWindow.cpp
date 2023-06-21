@@ -4,6 +4,7 @@
 
 #include "EditProductWindow.h"
 #include "Product/ProductsManager.h"
+#include "Utils.h"
 
 std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Windows::SysAdmin::EditProductWindow::show()
 {
@@ -17,8 +18,7 @@ std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Wind
 
             while(true)
             {
-                std::cout << "Введите ID продукта: ";
-                std::cin >> productID;
+                productID = Utils::getInputNum<int>("Введите ID продукта: ");
 
                 if(Product::ProductsManager::isProductExists(productID))
                 {
@@ -26,11 +26,9 @@ std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Wind
                     continue;
                 }
 
-                std::cout << "Введите имя продукта: ";
-                std::cin >> productName;
+                productName = Utils::getLine("Введите имя продукта: ");
 
-                std::cout << "Введите цену продукта: ";
-                std::cin >>productCost;
+                productCost = Utils::getInputNum<float>("Введите цену продукта: ");
 
                 std::shared_ptr<Product::Product> newProduct = Product::ProductsManager::createProduct();
                 newProduct->m_id = productID;
@@ -41,6 +39,8 @@ std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Wind
 
                 break;
             }
+
+            break;
         }
         case EDIT:
         {
@@ -55,8 +55,7 @@ std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Wind
                     std::uint16_t newID = 0;
                     while(true)
                     {
-                        std::cout << "Введите новый ID: ";
-                        std::cin >> newID;
+                        newID = Utils::getInputNum<int>("Введите новый ID: ");
 
                         if(Product::ProductsManager::isProductExists(newID))
                         {
@@ -64,7 +63,7 @@ std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Wind
                             continue;
                         }
 
-                        m_currentEditablePerson->m_id = newID;
+                        m_currentEditableProduct->m_id = newID;
 
                         std::cout << "ID изменён!" << std::endl;
                         break;
@@ -78,12 +77,9 @@ std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Wind
                     std::string newName;
                     while(true)
                     {
-                        std::cout << "Введите новое название: ";
-                        std::cin >> newName;
+                        newName = Utils::getLine("Введите новое название: ");
 
-                        // TODO:: сделать try-catch
-
-                        m_currentEditablePerson->m_name = newName;
+                        m_currentEditableProduct->m_name = newName;
 
                         std::cout << "Название изменено!" << std::endl;
                         break;
@@ -97,12 +93,9 @@ std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Wind
                     float newCost;
                     while(true)
                     {
-                        std::cout << "Введите новую стоимость: ";
-                        std::cin >> newCost;
+                        newCost = Utils::getInputNum<float>("Введите новую стоимость: ");
 
-                        // TODO:: сделать try-catch
-
-                        m_currentEditablePerson->m_cost = newCost;
+                        m_currentEditableProduct->m_cost = newCost;
 
                         std::cout << "Стоимость изменена!" << std::endl;
                         break;
@@ -116,8 +109,8 @@ std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Wind
         }
         case DELETE:
         {
-            Product::ProductsManager::removeProduct(m_currentEditablePerson->m_id);
-            std::cout << "Продукт с ID " << std::to_string(m_currentEditablePerson->m_id) << " был удалён!" << std::endl;
+            Product::ProductsManager::removeProduct(m_currentEditableProduct->m_id);
+            std::cout << "Продукт с ID " << std::to_string(m_currentEditableProduct->m_id) << " был удалён!" << std::endl;
 
             break;
         }

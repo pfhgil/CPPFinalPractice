@@ -19,6 +19,18 @@
 #define SYS_ADMIN_CHOOSE_MENU_WND_NAME "SysAdmin/ChooseMenuWindow"
 #define SYS_ADMIN_EDIT_MENU_WND_NAME "SysAdmin/EditMenuWindow"
 
+#define WAREHOUSE_MAIN_WND_NAME "Warehouse/MainWindow"
+#define WAREHOUSE_PRODUCTS_ORDER_WND_NAME "Warehouse/ProductsOrderWindow"
+#define WAREHOUSE_PRODUCTS_VIEW_WND_NAME "Warehouse/ProductsViewWindow"
+
+#define PROVIDER_MAIN_WND_NAME "Provider/MainWindow"
+
+#define ACCOUNTANT_MAIN_WND_NAME "Accountant/MainWindow"
+
+#define COOK_MAIN_WND_NAME "Cook/MainWindow"
+
+#define WAITER_MAIN_WND_NAME "Waiter/MainWindow"
+
 #include <map>
 #include <string>
 

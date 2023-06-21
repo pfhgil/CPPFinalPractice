@@ -28,7 +28,7 @@ std::shared_ptr<FinalPractice::Main::Windows::IWindow> FinalPractice::Main::Wind
     {
         if(productNum == chosenProduct)
         {
-            EditProductWindow::m_currentEditablePerson = product;
+            EditProductWindow::m_currentEditableProduct = product;
             break;
         }
         productNum++;

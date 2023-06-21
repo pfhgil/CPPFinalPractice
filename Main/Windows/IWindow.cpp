@@ -11,7 +11,7 @@ std::uint8_t FinalPractice::Main::Windows::IWindow::getPoint(const std::int8_t& 
         {
             num = Utils::getInputNum<std::uint8_t>("");
 
-            if(!(num >= min && num <= max))
+            if(!(num >= min && num <= max) || (min == 0 && max == 0))
             {
                 std::cout << "Number out of bounds (min: " << std::to_string(min) << ", max: " << std::to_string(max) << ")" << std::endl;
                 continue;

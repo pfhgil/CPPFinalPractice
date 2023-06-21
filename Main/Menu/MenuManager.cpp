@@ -34,7 +34,7 @@ void FinalPractice::Main::Menu::MenuManager::removeMenu(const std::string& name)
     m_menus.remove_if([&](const std::shared_ptr<Menu>& menu){ return menu->m_name == name; });
 }
 
-std::list<std::shared_ptr<FinalPractice::Main::Menu::Menu>> FinalPractice::Main::Menu::MenuManager::getMenus() noexcept
+std::list<std::shared_ptr<FinalPractice::Main::Menu::Menu>>& FinalPractice::Main::Menu::MenuManager::getMenus() noexcept
 {
     return m_menus;
 }
@@ -43,29 +43,27 @@ void FinalPractice::Main::Menu::MenuManager::save(const std::string_view& path)
 {
     std::ofstream menusFStream(path.data());
 
-    auto menus = nlohmann::json::array();
-    menus[0]["menusNum"] = m_menus.size();
+    auto menus = nlohmann::json();
+    menus["menusNum"] = m_menus.size();
 
-    int currentMenu = 1;
+    int currentMenu = 0;
     int currentProduct;
     for(const auto& menu : m_menus)
     {
         currentProduct = 0;
-        menus[currentMenu]["productsNum"] = menu->getProducts().size();
+        menus["menus"][currentMenu]["productsNum"] = menu->getProducts().size();
         for(const auto& product : menu->getProducts())
         {
-            menus[currentMenu][currentProduct]["id"] = product->m_id;
-            menus[currentMenu][currentProduct]["name"] = product->m_name;
-            menus[currentMenu][currentProduct]["cost"] = product->m_cost;
+            menus["menus"][currentMenu]["products"][currentProduct]["id"] = product->m_id;
 
             currentProduct++;
         }
 
-        menus[currentMenu]["name"] = menu->m_name;
-        menus[currentMenu]["gram"] = menu->m_gram;
-        menus[currentMenu]["description"] = menu->m_description;
-        menus[currentMenu]["cookingTimeSeconds"] = menu->m_cookingTimeSeconds;
-        menus[currentMenu]["cost"] = menu->m_cost;
+        menus["menus"][currentMenu]["name"] = menu->m_name;
+        menus["menus"][currentMenu]["gram"] = menu->m_gram;
+        menus["menus"][currentMenu]["description"] = menu->m_description;
+        menus["menus"][currentMenu]["cookingTimeSeconds"] = menu->m_cookingTimeSeconds;
+        menus["menus"][currentMenu]["cost"] = menu->m_cost;
 
         currentMenu++;
     }
@@ -81,27 +79,23 @@ void FinalPractice::Main::Menu::MenuManager::load(const std::string_view& path)
 
     auto menus = nlohmann::json::parse(menusFStream);
 
-    int menusNum = menus[0]["menusNum"];
+    int menusNum = menus["menusNum"];
 
-    for(int i = 1; i < menusNum + 1; i++)
+    for(int i = 0; i < menusNum; i++)
     {
         std::shared_ptr<Menu> newMenu = createMenu();
 
-        int productsNum = menus[i]["productsNum"];
-
-        std::shared_ptr<Product::Product> newProduct = Product::ProductsManager::createProduct();
+        int productsNum = menus["menus"][i]["productsNum"];
 
         for(int k = 0; k < productsNum; k++)
         {
-            newProduct->m_id = menus[i][k]["id"];
-            newProduct->m_name = menus[i][k]["name"];
-            newProduct->m_cost = menus[i][k]["cost"];
+            newMenu->getProducts().push_back(Product::ProductsManager::getProduct(menus["menus"][i]["products"][k]["id"]));
         }
 
-        newMenu->m_name = menus[i]["name"];
-        newMenu->m_gram = menus[i]["gram"];
-        newMenu->m_description = menus[i]["description"];
-        newMenu->m_cookingTimeSeconds = menus[i]["cookingTimeSeconds"];
-        newMenu->m_cost = menus[i]["cost"];
+        newMenu->m_name = menus["menus"][i]["name"];
+        newMenu->m_gram = menus["menus"][i]["gram"];
+        newMenu->m_description = menus["menus"][i]["description"];
+        newMenu->m_cookingTimeSeconds = menus["menus"][i]["cookingTimeSeconds"];
+        newMenu->m_cost = menus["menus"][i]["cost"];
     }
 }
